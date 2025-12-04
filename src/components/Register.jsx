@@ -13,9 +13,10 @@ const Register = () => {
     e.preventDefault();
     try {
         const res = await axios.post(
-            `/api/auth/register`,
+            `${process.env.REACT_APP_API_URL}/api/auth/register`,
             { name, email, password }
           );
+          
           
         console.log("Response:", res.data);
         setMessage(res.data.message);
