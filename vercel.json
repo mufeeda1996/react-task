@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://auth-backend-psp5.onrender.com/api/:path*"
+      }
+    ]
+  }
+  
+  

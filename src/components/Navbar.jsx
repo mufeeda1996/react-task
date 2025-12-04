@@ -66,8 +66,8 @@ const Navbar = () => {
 
         {/* Right CTA */}
         <div className="navbar-end flex gap-3">
-        <Link to="/login"> <button className="btn btn-ghost text-white hover:text-blue-400">
-            Login
+        <Link to="/users"> <button className="btn btn-ghost text-white hover:text-blue-400">
+            Users
           </button></Link>
 
           <Link to="/register">  <button className="btn bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 shadow-lg shadow-blue-600/30">
