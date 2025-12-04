@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
     try {
         const res = await axios.post(
-            `https://auth-backend-psp5.onrender.com/api/auth/register`,
+            "https://auth-backend-psp5.onrender.com/api/auth/register",
             { name, email, password }
           );
           
