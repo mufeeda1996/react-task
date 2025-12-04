@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -64,13 +66,13 @@ const Navbar = () => {
 
         {/* Right CTA */}
         <div className="navbar-end flex gap-3">
-          <button className="btn btn-ghost text-white hover:text-blue-400">
+        <Link to="/login"> <button className="btn btn-ghost text-white hover:text-blue-400">
             Login
-          </button>
+          </button></Link>
 
-          <button className="btn bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 shadow-lg shadow-blue-600/30">
-            Get Started
-          </button>
+          <Link to="/register">  <button className="btn bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 shadow-lg shadow-blue-600/30">
+            Sign up
+          </button></Link> 
         </div>
       </div>
     </div>
