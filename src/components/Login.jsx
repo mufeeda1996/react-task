@@ -14,8 +14,10 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-        const res = await axios.post("https://auth-backend-psp5.onrender.com/api/auth/login", { email, password });
-          
+        await axios.post(
+            "https://auth-backend-psp5.onrender.com/api/auth/login",
+            { email, password }
+          );
   
         setMessage(res.data.message);
         setEmail("");
