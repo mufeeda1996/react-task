@@ -15,9 +15,8 @@ const Login = () => {
     e.preventDefault()
     try {
       // ✅ Use backend URL from environment variable
-      const API = process.env.REACT_APP_API_URL
-
-      const res = await axios.post(`${API}/api/auth/login`, {
+      
+      const res = await axios.post('https://auth-backend-psp5.onrender.com/api/auth/login', {
         email,
         password
       })
