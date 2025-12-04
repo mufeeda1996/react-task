@@ -12,25 +12,26 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
-        name,
-        email,
-        password,
-      });
-      setMessage(res.data.message);
-      setName("");
-      setEmail("");
-      setPassword("");
-    } catch (err) {
-      setMessage(err.response?.data?.message || "Registration failed");
-    }
-  };
+        const res = await axios.post(
+            `/api/auth/register`,
+            { name, email, password }
+          );
+          
+        console.log("Response:", res.data);
+        setMessage(res.data.message);
+        setName("");
+        setEmail("");
+        setPassword("");
+      } catch (err) {
+        console.error("Registration error:", err);
+        setMessage(err.response?.data?.message || err.message || "Registration failed");
+      }
+    };
 
   return (
     <>
       <Navbar />
 
-      {/* Full viewport height container for perfect centering */}
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-md bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10 shadow-2xl">
           <h2 className="text-3xl font-extrabold text-white mb-6 text-center">

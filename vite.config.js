@@ -7,4 +7,13 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://auth-backend-psp5.onrender.com',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 })
