@@ -15,16 +15,17 @@ const Login = () => {
     e.preventDefault()
     try {
       const API = 'https://auth-backend-psp5.onrender.com'
-
-      await axios.post(`${API}/api/auth/login`, {
+  
+      // ✅ Capture the response
+      const res = await axios.post(`${API}/api/auth/login`, {
         email,
         password
       })
-
+  
       setMessage(res.data.message)
       setEmail('')
       setPassword('')
-
+  
       // Redirect to Product page after successful login
       if (res.data.message === 'Login successful') {
         navigate('/') // <-- redirect
@@ -34,7 +35,7 @@ const Login = () => {
       console.log(err, 'errrrrrrrrr')
     }
   }
-
+  
   return (
     <>
       <Navbar />
