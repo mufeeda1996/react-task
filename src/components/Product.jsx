@@ -117,7 +117,11 @@ export default function AIGallery () {
               />
 
               {/* Overlay */}
-              <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end'>
+              <div
+                className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent 
+opacity-100 md:opacity-0 md:group-hover:opacity-100 
+transition duration-300 flex items-end'
+              >
                 <button
                   className='m-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold'
                   onClick={() => openModal(item)}
@@ -167,8 +171,6 @@ export default function AIGallery () {
                           Close
                         </button>
                       </form>
-
-                     
                     </div>
                   </>
                 )}
@@ -186,8 +188,6 @@ export default function AIGallery () {
                 <span className='text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-400'>
                   AI Generated
                 </span>
-
-               
               </div>
             </div>
           </div>
